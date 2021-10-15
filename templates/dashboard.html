@@ -1,0 +1,188 @@
+{% extends 'base/base_dash.html' %}
+{% block title %} {{title}} {% endblock title %}
+{% block content %}
+
+<nav class="navbar navbar-expand-sm bg-white sticky-top">
+    <!--<ul class="nav">
+        <i class="nav-item">
+            <a class="nav-link" href="/"><img src="static\images\Logo.png" alt="Logo" style="width:65px;"
+            class="rounded-pill"></a>
+        </i>
+    </ul>-->
+
+    <button class="btn btn-outline-secondary btn-lg" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#demo"><img src="static\images\Logo.png" alt="Logo" style="width:65px;"
+            class="rounded-pill"></button>
+
+    <div class="container">
+        <p class="nav-item">
+        <h1 class="font-family font-size: 16px">Social Melipona beecheii</h1>
+        </p>
+    </div>
+    <!--
+    <div class="text-end">
+        <a href="{{ url_for('login') }}" class="btn fa fa-user-alt fa-4x" ondblclick="alert('user')"></a>
+    </div>-->
+
+</nav>
+
+<div class="offcanvas offcanvas-start" id="demo">
+    <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Dashboard</h1><a class="btn fa fa-home " href="/"></a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="btn-group-vertical">
+
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary fa-2x">Dashboard</a>
+        <a href="{{ url_for('publicacion') }}" class="btn btn-secondary fa-2x">Publicaciones</a>
+        <a href="{{ url_for('comentario') }}" class="btn btn-secondary fa-2x">Comentarios</a>
+        <a href="{{ url_for('profile') }}" class="btn btn-secondary fa-2x">Perfil de Usuario</a>
+        <a href="{{ url_for('ayuda') }}" class="btn btn-secondary fa-2x">Ayuda</a>
+
+    </div>
+</div>
+<!--
+<div class="container-fluid mt-3">
+    <h3>Offcanvas Sidebar</h3>
+    <p>Offcanvas is similar to modals, except that it is often used as a sidebar.</p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Open Offcanvas Sidebar</button>
+</div>-->
+
+<div class="container mt-3">
+    <div class="table-responsive-sm">
+        <h2 class="text-center">Tabla</h2>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Tema</th>
+                    <th>Visitas</th>
+                    <th>Descargas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carro</td>
+                    <td>Motores</td>
+                    <td>12560</td>
+                    <td>859</td>
+                </tr>
+                <tr>
+                    <td>Jean</td>
+                    <td>Ropa</td>
+                    <td>4561</td>
+                    <td>2365</td>
+                </tr>
+                <tr>
+                    <td>Flor</td>
+                    <td>Naturaleza</td>
+                    <td>45067</td>
+                    <td>15023</td>
+                </tr>
+                <tr>
+                    <td>Perro</td>
+                    <td>Animales</td>
+                    <td>5456</td>
+                    <td>1375</td>
+                </tr>
+                <tr>
+                    <td>Gato</td>
+                    <td>Animales</td>
+                    <td>6893</td>
+                    <td>2459</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="{{ url_for('profile') }}" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="fa fa-eye"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        5480</h4>
+                    <p class="list-group-item-text">
+                        Vistas del Perfil</p>
+                </a><a href="http://www.facebook.com" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="fa fa-facebook-square"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        65234</h4>
+                    <p class="list-group-item-text">
+                        Me gusta-Facebook</p>
+                </a><a href="http://myaccount.google.com" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="fa fa-google-plus-square"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        50612</h4>
+                    <p class="list-group-item-text">
+                        Google+</p>
+                </a><a href="http://www.twitter.com" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="fa fa-twitter-square"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        42376</h4>
+                    <p class="list-group-item-text">
+                        Seguidoes en Twitter</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="http://www.tumblr.com" class="list-group-item tumblr">
+                    <h3 class="pull-right">
+                        <i class="fa fa-tumblr-square"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        23748</h4>
+                    <p class="list-group-item-text">
+                        Tumblr</p>
+                    <a href="http://www.linkedin.com" class="list-group-item linkedin">
+                        <h3 class="pull-right">
+                            <i class="fa fa-linkedin-square"></i>
+                        </h3>
+                        <h4 class="list-group-item-heading count">
+                            40651</h4>
+                        <p class="list-group-item-text">
+                            Linkedin</p>
+                    </a>
+                </a><a href="http://www.youtube.com" class="list-group-item youtube">
+                    <h3 class="pull-right">
+                        <i class="fa fa-youtube-play"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        60823</h4>
+                    <p class="list-group-item-text">
+                        Youtub Play</p>
+                </a><a href="http://www.vimeo.com" class="list-group-item vimeo">
+                    <h3 class="pull-right">
+                        <i class="fa fa-vimeo-square"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        55832</h4>
+                    <p class="list-group-item-text">
+                        Vimeo</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.5164107565!2d-74.2478938043006!3d4.648283717342738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1634248380745!5m2!1ses!2sco"
+        width="720" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.5164107565!2d-74.2478938043006!3d4.648283717342738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1634248380745!5m2!1ses!2sco"
+        width="720" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+{% endblock content %}

@@ -1,0 +1,163 @@
+{% extends 'base/base_front.html' %}
+{% block title %} {{title}} {% endblock title %}
+{% block content %}
+
+<nav class="navbar navbar-expand-sm bg-white sticky-top">
+    <ul class="nav"></ul>
+    <div class="container">
+        <p class="nav-item">
+        <h1 class="font-family font-size: 16px">Social Melipona beecheii</h1>
+        </p>
+    </div>
+    <div class="text-end">
+        <a href="{{ url_for('login') }}" class="btn fa fa-user-alt fa-4x" ondblclick="alert('user')"></a>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-white sticky-top">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/"><img src="static\images\Logo.png" alt="Logo" style="width:65px;"
+            class="rounded-pill"></a>
+      </li>
+    </ul>
+    <form class="d-flex navbar-brand" action="/" method="get">
+      <input class="form-control mr-sm-2 " placeholder="Search" type="search" id="gsearch" name="gsearch" size="150%">
+      <button class="btn outline-success" type="search" id="search">
+        <h3><i class="fas fa-search"></i></h3>
+      </button>
+      <!--<i class="fas fa-search"></i> == ICON-->
+      <button class="btn outline-success" type="reset" id="reload">
+        <h3><i class="fas fa-sync-alt"></i></h3>
+      </button>
+      <!--<i class="fas fa-sync-alt"></i> == ICON-->
+    </form>
+    <div class="col-sm">
+      <form action="/" method="get">
+        <i class="btn far fa-heart fa-2x margin-left" onclick="alert('Agregado a Favorito')"></i>
+        <a href="{{ url_for('locacion') }}" class="btn fas fa-map-marker-alt fa-2x margin-left"
+          ondblclick="alert('locacion')"></a>
+        <i class="btn fas fa-share-alt-square fa-2x margin-left" onclick="alert('Compartir')"></i>
+        <i class="btn far fa-bell fa-2x margin-left" onclick="alert('Notification')"></i>
+      </form>
+    </div>
+    <div>
+      <div class="col-sm">
+
+        <i class="nav justify-content-end">
+          <a href="{{ url_for('login') }}" class="btn fa fa-power-off fa-4x" ondblclick="alert('Salida Usuario')"></a>
+        </i><br>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+  <div class="nav-link fixed-bottom">
+    <i class="nav justify-content-end">
+      <a href="{{ url_for('comentario') }}" class="btn far fa-comment-dots fa-4x"></a>
+    </i>
+    <li class="nav justify-content-end">
+      <div class="dropdown dropstart">
+        <a class="btn far fa-question-circle fa-4x" ondblclick="alert('Ayuda')" role="button"
+          data-bs-toggle="dropdown"></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/ayuda">
+              <h6>Ayuda</h6>
+            </a></li>
+          <li><a class="dropdown-item" href="/dashboard">
+              <h6>Dashboard</h6>
+            </a></li>
+        </ul>
+      </div>
+    </li>
+  </div>
+
+
+  <img src="static\images\Logo.png" alt="Logo" style="width:720px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:500px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:600px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:280px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:650px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:525px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:380px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:700px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:625px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:300px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:400px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:720px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:500px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:600px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:280px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:650px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:525px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:380px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:700px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:625px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:300px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:400px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:720px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:500px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:600px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:280px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:650px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:525px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:380px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:700px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:625px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:300px;" class="rounded-pill">
+  <img src="static\images\Logo.png" alt="Logo" style="width:400px;" class="rounded-pill">
+
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+  <p>Some example text. Some example text. Some example text. Some example text. Some example text.</p>
+
+{% endblock content %}
