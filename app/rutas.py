@@ -4,12 +4,12 @@ from flask import render_template, url_for
 
 
 @app.route('/')
-@app.route('/front_page')
+@app.route('/front_page', methods=['GET'])
 def front_page():
     title= 'Social Melipona beecheii'
     return render_template('front_page.html', title = title)
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=['GET'])
 def dashboard():
     title= 'Dashboard'
     return render_template('dashboard.html', title = title)
