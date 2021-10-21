@@ -43,3 +43,13 @@ def profile():
 def publicacion():
     title= 'Publicación'
     return render_template('publicacion.html', title = title)
+
+@app.route('/publicacion2')
+def publicacion2():
+    title= 'Publicación2'
+    return render_template('publicacion2.html', title = title)
+
+@app.route('/publicacion3')
+def publicacion3():
+    title= 'Publicación3'
+    return render_template('publicacion3.html', title = title)
